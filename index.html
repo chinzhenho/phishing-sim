@@ -12,7 +12,6 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
 
     .login-box {
@@ -72,13 +71,26 @@
 
   <script>
     document.getElementById("login-form").addEventListener("submit", function(e) {
-      e.preventDefault(); // Stop form from submitting
+      e.preventDefault();
 
       const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
 
-      // Fake login logic (always fails)
-      alert("Login failed. Please contact your administrator.");
+      // Logging payload
+      const payload = {
+        event: "form_submit",
+        email_domain: email.split("@")[1] || "unknown",
+        timestamp: new Date().toISOString(),
+      };
+
+      // Simulate logging (this will fail if URL is not real)
+      fetch("https://your-logging-endpoint.com/track", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(err => console.warn("Log failed", err));
+
+      // Show message and redirect
+      alert("Login failed. Please contact your IT Department, Muhammad Amirul. An email will be sent to amirul@flexiversa.com.");
       window.location.href = "alert.html";
     });
   </script>

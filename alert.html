@@ -2,42 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Alert</title>
+  <title>Login Alert</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       background: #fff3cd;
       color: #856404;
-      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
-
-    .alert-box {
+    .message {
+      padding: 30px;
       border: 1px solid #ffeeba;
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .alert-box h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .alert-box p {
-      font-size: 16px;
+      background: #fff3cd;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <div class="alert-box">
-    <h1>Access Denied</h1>
-    <p>Your login attempt has failed.<br>Please contact your IT Department, Muhammad Amirul, amirul@flexiversa.com.</p>
+  <div class="message">
+    <h2>Login Failed</h2>
+    <p>Please contact your IT Department: <strong>Muhammad Amirul</strong></p>
+    <p>Email: <a href="mailto:amirul@flexiversa.com">amirul@flexiversa.com</a></p>
   </div>
 </body>
 </html>
