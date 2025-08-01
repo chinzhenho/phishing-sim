@@ -2,35 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login Failed</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert</title>
   <style>
     body {
-      background: #fff3f3;
-      color: #b00020;
+      background: #fff3cd;
+      color: #856404;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .alert-box {
+      border: 1px solid #ffeeba;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .message-box {
-      padding: 30px;
-      background: white;
-      border: 2px solid #b00020;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    .alert-box h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
-    h1 {
-      margin: 0 0 10px;
+
+    .alert-box p {
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <div class="message-box">
-    <h1>Login Failed</h1>
-    <p>Please contact your system administrator for assistance.</p>
+  <div class="alert-box">
+    <h1>Access Denied</h1>
+    <p>Your login attempt has failed.<br>Please contact your administrator.</p>
   </div>
 </body>
 </html>

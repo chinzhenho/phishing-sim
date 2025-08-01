@@ -12,6 +12,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
 
     .login-box {
@@ -71,25 +72,12 @@
 
   <script>
     document.getElementById("login-form").addEventListener("submit", function(e) {
-      e.preventDefault();
+      e.preventDefault(); // Stop form from submitting
 
       const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
 
-      // Basic anonymized logging
-      const payload = {
-        event: "form_submit",
-        email_domain: email.split("@")[1] || "unknown",
-        timestamp: new Date().toISOString(),
-      };
-
-      // Send to webhook (optional - replace with your own endpoint)
-      fetch("https://your-logging-endpoint.com/track", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      }).catch(err => console.warn("Log failed", err));
-
-      // Simulate login failure and redirect
+      // Fake login logic (always fails)
       alert("Login failed. Please contact your administrator.");
       window.location.href = "alert.html";
     });
