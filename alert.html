@@ -1,34 +1,36 @@
-<!-- alert.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Account Access Restricted</title>
+  <title>Login Failed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background: #ffebee;
+      background: #fff3f3;
+      color: #b00020;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding-top: 100px;
+    }
+    .message-box {
+      padding: 30px;
+      background: white;
+      border: 2px solid #b00020;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h1 {
-      color: #d32f2f;
-    }
-    p {
-      color: #555;
-      font-size: 18px;
+      margin: 0 0 10px;
     }
   </style>
-  <script>
-    // Prevent user from closing tab or refreshing easily
-    window.onbeforeunload = function () {
-      return "Please contact IT department before leaving this page.";
-    };
-  </script>
 </head>
 <body>
-  <h1>Access Restricted</h1>
-  <p>Your login attempt has been flagged. Please contact the IT Department immediately.</p>
+  <div class="message-box">
+    <h1>Login Failed</h1>
+    <p>Please contact your system administrator for assistance.</p>
+  </div>
 </body>
 </html>
