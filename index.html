@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexi Versa Secure Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-box">
+    <img src="https://via.placeholder.com/100" alt="Company Logo" class="logo">
+    <h2>Sign in to Flexi Versa Group</h2>
+    <form onsubmit="return handleSubmit()">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <input type="submit" value="Sign In">
+    </form>
+    <p class="footer-note">© 2025 Flexi Versa Group</p>
+  </div>
+
+  <script>
+    function handleSubmit() {
+      alert("This was a phishing simulation.\nPlease stay alert and report suspicious emails to IT.");
+      window.location.href = "https://your-company-training-page.com"; // Replace with actual training link
+      return false;
+    }
+  </script>
+</body>
+</html>
