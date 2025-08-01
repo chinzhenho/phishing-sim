@@ -1,0 +1,34 @@
+<!-- alert.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account Access Restricted</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #ffebee;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #d32f2f;
+    }
+    p {
+      color: #555;
+      font-size: 18px;
+    }
+  </style>
+  <script>
+    // Prevent user from closing tab or refreshing easily
+    window.onbeforeunload = function () {
+      return "Please contact IT department before leaving this page.";
+    };
+  </script>
+</head>
+<body>
+  <h1>Access Restricted</h1>
+  <p>Your login attempt has been flagged. Please contact the IT Department immediately.</p>
+</body>
+</html>
